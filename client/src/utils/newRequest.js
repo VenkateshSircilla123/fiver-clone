@@ -1,5 +1,8 @@
-import axios from 'axios'
+import axios from "axios";
 
-const newRequest = axios.create({baseURL: 'http://localhost:8800/api', withCredentials:true})
+const newRequest = axios.create({
+  baseURL: "https://fiver-clone-server.vercel.app/api",
+  withCredentials: true,
+});
 
-export default newRequest
+export default newRequest;
