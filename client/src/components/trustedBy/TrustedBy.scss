@@ -1,0 +1,32 @@
+.trustedBy {
+  background-color: #fafafa;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 0px 10px;
+
+
+  .container {
+    max-width: 760px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    align-items: center;
+    gap: 20px;
+    color: rgb(200, 200, 200);
+    font-weight: 500;
+    
+
+    img{
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+}
+
+
+.container::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none;
+}
