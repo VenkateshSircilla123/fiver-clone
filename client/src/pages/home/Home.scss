@@ -1,19 +1,18 @@
 .home {
-
-  .recentlyViewedContainer{
+  .recentlyViewedContainer {
     background-color: #f1fdf7;
     display: flex;
     justify-content: center;
   }
-  .recentlyViewed{
+  .recentlyViewed {
     margin-left: 10px;
-
   }
   .features {
     background-color: #f1fdf7;
     display: flex;
     justify-content: center;
     padding: 100px 10px;
+    margin-bottom: 40px;
 
     &.dark {
       background-color: #0d084d;
@@ -59,7 +58,6 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        
 
         &:first-child {
           flex: 2;
@@ -68,7 +66,7 @@
           flex: 3;
         }
 
-        img{
+        img {
           width: 100%;
         }
         h1 {
@@ -95,7 +93,7 @@
           letter-spacing: 1px;
         }
 
-        video{
+        video {
           // width: 720px;
         }
       }
@@ -122,9 +120,8 @@
 
     .container {
       width: 1400px;
-      
 
-      h1{
+      h1 {
         color: #555;
       }
 
@@ -151,19 +148,19 @@
             height: 50px;
           }
 
-          .line{
+          .line {
             width: 50px;
             height: 2px;
             background-color: lightgray;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
           }
 
           span {
             font-weight: 300;
           }
 
-          &:hover{
-            .line{
+          &:hover {
+            .line {
               width: 80px;
               background-color: #1dbf73;
             }
@@ -172,5 +169,4 @@
       }
     }
   }
-  
 }

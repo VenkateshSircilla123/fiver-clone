@@ -55,6 +55,7 @@ const CheckoutForm = () => {
     }
 
     setIsLoading(true);
+    console.log(elements);
 
     const { error } = await stripe.confirmPayment({
       elements,
@@ -64,6 +65,7 @@ const CheckoutForm = () => {
       },
     });
 
+    console.log(error.type);
     // This point will only be reached if there is an immediate error when
     // confirming the payment. Otherwise, your customer will be redirected to
     // your `return_url`. For some payment methods like iDEAL, your customer will
