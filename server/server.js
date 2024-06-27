@@ -20,7 +20,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://vs-fiver-clone.onrender.com",
+      "https://fiver-clone-six.vercel.app",
+    ],
     credentials: true,
   })
 );
@@ -63,7 +67,10 @@ app.use("/api/orders", orderRoute);
 app.use("/api/reviews", reviewRoute);
 
 app.use((err, req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:5173/*");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://vs-fiver-clone.onrender.com"
+  );
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
