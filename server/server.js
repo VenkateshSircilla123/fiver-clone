@@ -20,11 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://vs-fiver-clone.onrender.com",
-      "https://fiver-clone-six.vercel.app",
-    ],
+    origin: ["http://localhost:5173", "https://fiver-clone-six.vercel.app"],
     credentials: true,
   })
 );
