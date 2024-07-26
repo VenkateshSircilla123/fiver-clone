@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { getOrders, intent, confirm} from '../controllers/order.controller.js'
-import { verifyToken } from '../middleware/jwt.js'
+import { getOrders, intent, confirm } from "../controllers/order.controller.js";
+import { verifyToken } from "../middleware/jwt.js";
 
-const router = Router()
+const router = Router();
 
 router.get("/", verifyToken, getOrders);
-router.post("/create-payment-intent/:id", verifyToken, intent);
+router.post("/create-payment-intent/:id", intent);
 router.put("/", verifyToken, confirm);
 
-export default router
+export default router;
