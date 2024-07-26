@@ -2,6 +2,7 @@ import Order from "../models/order.model.js";
 import Gig from "../models/Gig.model.js";
 import Stripe from "stripe";
 export const intent = async (req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
   const stripe = new Stripe(process.env.STRIPE);
 
   const gig = await Gig.findById(req.params.id);
