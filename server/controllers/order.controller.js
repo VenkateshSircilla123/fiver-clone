@@ -6,8 +6,21 @@ export const intent = async (req, res, next) => {
 
   const gig = await Gig.findById(req.params.id);
 
+  const customer = await stripe.customers.create({
+    name: req.userId,
+    address: {
+      line1: "510 Townsend St",
+      postal_code: "98140",
+      city: "San Francisco",
+      state: "CA",
+      country: "US",
+    },
+  });
+
   const paymentIntent = await stripe.paymentIntents.create({
     amount: gig.price * 100,
+    description: "this is payment intent",
+    customer: customer.id,
     currency: "usd",
     automatic_payment_methods: {
       enabled: true,
