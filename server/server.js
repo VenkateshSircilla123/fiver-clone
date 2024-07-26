@@ -63,10 +63,7 @@ app.use("/api/orders", orderRoute);
 app.use("/api/reviews", reviewRoute);
 
 app.use((err, req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://vs-fiver-clone.onrender.com"
-  );
+  res.header("Access-Control-Allow-Origin", true);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
