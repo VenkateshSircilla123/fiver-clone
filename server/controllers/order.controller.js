@@ -22,6 +22,16 @@ export const intent = async (req, res, next) => {
     amount: gig.price * 100,
     description: "this is payment intent",
     customer: customer.id,
+    shipping: {
+      name: "Jenny Rosen",
+      address: {
+        line1: "510 Townsend St",
+        postal_code: "98140",
+        city: "San Francisco",
+        state: "CA",
+        country: "US",
+      },
+    },
     currency: "usd",
     automatic_payment_methods: {
       enabled: true,
