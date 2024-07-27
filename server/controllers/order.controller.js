@@ -28,11 +28,13 @@ export const intent = async (req, res, next) => {
     },
   });
 
+  console.log(req);
+
   const newOrder = new Order({
     gigId: gig._id,
     img: gig.cover,
     title: gig.title,
-    buyerId: req.userId,
+    buyerId: "req.userId",
     sellerId: gig.userId,
     price: gig.price,
     payment_intent: paymentIntent.id,

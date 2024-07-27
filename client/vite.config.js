@@ -14,4 +14,15 @@ export default defineConfig({
     //   }
     // })
   ],
+  server: {
+    port: 5173,
+    // Get rid of the CORS error
+    proxy: {
+      "/api": {
+        target: "http://localhost:8800",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
