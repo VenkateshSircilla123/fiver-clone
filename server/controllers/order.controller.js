@@ -28,8 +28,6 @@ export const intent = async (req, res, next) => {
     },
   });
 
-  console.log(req);
-
   const newOrder = new Order({
     gigId: gig._id,
     img: gig.cover,
