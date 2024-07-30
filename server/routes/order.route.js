@@ -4,8 +4,8 @@ import { verifyToken } from "../middleware/jwt.js";
 
 const router = Router();
 
-router.get("/", verifyToken, getOrders);
+router.get("/", getOrders);
 router.post("/create-payment-intent/:id", intent);
-router.put("/", verifyToken, confirm);
+router.put("/", confirm);
 
 export default router;
